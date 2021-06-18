@@ -17,33 +17,34 @@
 import os
 from DaisyXMusic.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,UPDATES_CHANNEL
 class Messages():
-      START_MSG = "**🌸 hello [{}](tg://user?id={})!**\n\n🌸 aku veez music bot, aku bisa memutar lagu di dalam voice chat group dan channel.\n\n🌸 ketik /help untuk bantuan yah."
+      START_MSG = "**🌻 hello [{}](tg://user?id={})! selamat datang di sgp music bot.**\n\n🌻 aku sagapung music bot, aku bisa memutar lagu di dalam voice chat group dan channel kamu.\n\n🌻 ketik /help untuk bantuan dan informasi lengkap yah."
       HELP_MSG = [
         ".",
 f"""
-**🌸 hai, welcome back to {PROJECT_NAME}
+**🌻 hai, welcome back to {PROJECT_NAME}
 
-🌸 {PROJECT_NAME} dapat memutar musik di voice chat group dan channel.
+🌻 {PROJECT_NAME} dapat memutar musik di voice chat group dan channel kamu.
 
-🌸 asisstant bot ➠ @{ASSISTANT_NAME}\n\ntekan next untuk langkah selanjutnya.**
+🌻 asisstant bot ➠ @{ASSISTANT_NAME}\n\ntekan next dibawah untuk langkah selanjutnya.**
 """,
 
 f"""
-**🌻 pengaturan untuk grup:**
+**🍁 pengaturan untuk grup:**
 
 1) bot harus jadi admin dan diberi izin manage voice chat.
 2) nyalakan vcg atau voice chat nya sebelum req music.
 3) lalu ketik /play [judul lagu] untuk memutar music.
 4) jika asisstant bergabung ke vcg silahkan menikmati music nya, jika tidak, tambahkan @{ASSISTANT_NAME} ke dalam grup lalu coba lagi.
 
-**🌻 pengaturan untuk channel:**
+**🍁 pengaturan untuk channel:**
+
 1) jadikan saya admin di channel.
 2) ketik /userbotjoinchannel di grup yang dihubungkan dengan channel.
 3) lalu ketikkan perintah dibawah ini di dalam grup yang dihubungkan ke channel.
 
-**🌸 commands.**
+**🌻 commands.**
 
-**🌻 perintah memutar lagu:**
+**🍁 perintah memutar lagu:**
 
 - /play: putar lagu dengan judul/nama lagu.
 - /play [link youtube] : putar lagu melalui link youtube.
@@ -52,7 +53,7 @@ f"""
 - /splay: putar lagu via jio saavn.
 - /ytplay: putar lagu via youtube music.
 
-**🌻 playback:**
+**🍁 playback:**
 
 - /player: buka pengaturan pemutar musik.
 - /skip: lewati lagu saat ini ke lagu berikutnya.
@@ -68,7 +69,7 @@ f"""
 f"""
 **=>> Channel Music Play 🛠**
 
-🌸 hanya untuk admin grup channel:
+🍁 hanya untuk admin grup & channel:
 
 - /cplay [nama lagu] - play song you requested
 - /cdplay [nama lagu] - play song you requested via deezer
@@ -84,7 +85,7 @@ f"""
 
 channel juga dapat digunakan sebagai pengganti c ( /cplay = /channelplay )
 
-🌸 Jika anda tidak ingin memutar musik di grup channel lakukan ini:
+🍁 Jika anda tidak ingin memutar musik di grup channel lakukan ini:
 
 1) ambil id channel mu.
 2) buat grup dengan nama: Channel Music: your_channel_id
@@ -94,7 +95,7 @@ channel juga dapat digunakan sebagai pengganti c ( /cplay = /channelplay )
 """,
 
 f"""
-**🌻 more tools:**
+**🍁 more tools:**
 
 - /musicplayer [on/off]: enable/disable music player.
 - /admincache: perbarui informasi admin di grup anda. lakukan jika bot tidak merespon perintah admin.
@@ -106,7 +107,7 @@ f"""
  - /gcast <balas ke pesan> - kirim pesan broadcast secara global.
  - /pmpermit [on/off] - enable/disable pesan pmpermit.
  
-*sudo users dapat menjalankan perintah apa pun di grup mana pun.
+➠ sudo users dapat menjalankan perintah apa pun di grup mana pun.
 
 """
       ]
