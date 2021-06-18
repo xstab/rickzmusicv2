@@ -720,7 +720,7 @@ async def play(_, message: Message):
             photo="final.png",
             reply_markup=keyboard,
             caption=f"🏷 **Judul:** [{title[:60]}]({url})\n**⏱ Durasi:** {duration}\n" \
-                + f"💡 **Status:** Playing\n🎧 **Permintaan:** {requested_by}".format(
+                + f"💡 **Status:** Playing\n🎧 **Permintaan:** {r_by.mention}".format(
                 message.from_user.mention()
             ),
         )
@@ -1168,11 +1168,11 @@ async def lol_cb(b, cb):
     try:
         x,query,useer_id = typed_.split("|")      
     except:
-        await cb.message.edit("Song Not Found")
+        await cb.message.edit("lagu tidak ditemukan")
         return
     useer_id = int(useer_id)
     if cb.from_user.id != useer_id:
-        await cb.answer("You ain't the person who requested to play the song!", show_alert=True)
+        await cb.answer("kamu bukan orang yang merequest lagu ini!", show_alert=True)
         return
     await cb.message.edit("💡 bersiap memutar lagu...")
     x=int(x)
@@ -1258,9 +1258,7 @@ async def lol_cb(b, cb):
             photo="final.png",
             reply_markup=keyboard,
             caption=f"🏷 **Judul:** [{title[:60]}]({url})\n**⏱ Durasi:** {duration}\n" \
-                + f"💡 **Status:** Playing\n🎧 **Permintaan:** {requested_by}".format(
-                message.from_user.mention()
-            ),
+                + f"💡 **Status:** Playing\n🎧 **Permintaan:** {r_by.mention}",
         )
         
         os.remove("final.png")
