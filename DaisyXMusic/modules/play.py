@@ -254,7 +254,7 @@ async def hfmm(_, message):
     if status == "ON" or status == "on" or status == "On":
         lel = await message.reply("`memproses...`")
         if not message.chat.id in DISABLED_GROUPS:
-            await lel.edit("music player sudah diaktifkan di onrolan ini")
+            await lel.edit("music player sudah diaktifkan di obrolan ini")
             return
         DISABLED_GROUPS.remove(message.chat.id)
         await lel.edit(
@@ -310,7 +310,7 @@ async def p_cb(b, cb):
 
 
 @Client.on_callback_query(
-    filters.regex(pattern=r"^(play|pause|skip|leave|puse|resume|menu|cls)$")
+    filters.regex(pattern=r"^(play|pause|skip|leave|pause|resume|menu|cls)$")
 )
 @cb_admin_check
 async def m_cb(b, cb):
@@ -345,7 +345,7 @@ async def m_cb(b, cb):
         if (chet_id not in callsmusic.pytgcalls.active_calls) or (
             callsmusic.pytgcalls.active_calls[chet_id] == "playing"
         ):
-            await cb.answer("Chat is not connected!", show_alert=True)
+            await cb.answer("obrolan tidak terhubung!", show_alert=True)
         else:
             callsmusic.pytgcalls.resume_stream(chet_id)
             await cb.answer("music resumed!")
@@ -356,7 +356,7 @@ async def m_cb(b, cb):
     elif type_ == "playlist":
         queue = que.get(cb.message.chat.id)
         if not queue:
-            await cb.message.edit("player tidak  terhubung ke vcg.")
+            await cb.message.edit("player tidak terhubung ke vcg.")
         temp = []
         for t in queue:
             temp.append(t)
@@ -551,7 +551,7 @@ async def play(_, message: Message):
         )
         file_name = get_file_name(audio)
         title = file_name
-        thumb_name = "https://telegra.ph/file/c7dd34a31e9c0b3ecd29b.png"
+        thumb_name = "https://telegra.ph/file/5d60432aa9d90918e87f2.png"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
         views = "locally added"
@@ -617,7 +617,7 @@ async def play(_, message: Message):
           await lel.edit("berikan saya sesuatu untuk diputar!")
         # Looks like hell. Aren't it?? FUCK OFF
         try:
-            toxxt = "**pilih lagu yang ingin anda putar!**\n\n"
+            toxxt = "**pilih lagu yang ingin anda putar !!**\n\n"
             j = 0
             useer=user_name
             emojilist = ["1️⃣","2️⃣","3️⃣","4️⃣","5️⃣",]
@@ -664,7 +664,7 @@ async def play(_, message: Message):
 
             except Exception as e:
                 await lel.edit(
-                    "lagu tidak ditemukan, berikan nama lagu yang benar."
+                    "lagu tidak ditemukan, berikan saya nama/judul lagu yang benar."
                 )
                 print(str(e))
                 return
@@ -740,7 +740,7 @@ async def ytplay(_, message: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "veez music"
+        user.first_name = "fs musical"
     usar = user
     wew = usar.id
     try:
@@ -887,7 +887,7 @@ async def deezer(client: Client, message_: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "sgp music"
+        user.first_name = "fs musical"
     usar = user
     wew = usar.id
     try:
@@ -950,15 +950,15 @@ async def deezer(client: Client, message_: Message):
         url = songs.result[0].url
         artist = songs.result[0].artist
         duration = songs.result[0].duration
-        thumbnail = "https://telegra.ph/file/c7dd34a31e9c0b3ecd29b.png"
+        thumbnail = "https://telegra.ph/file/5d60432aa9d90918e87f2.png"
 
     except:
-        await res.edit("Found Literally Nothing, You Should Work On Your English!")
+        await res.edit("saya tidak menemukan apapun, pastikan anda memberikan judul lagu yang benar!")
         return
     try:    
         duuration= round(duration / 60)
         if duuration > DURATION_LIMIT:
-            await cb.message.edit(f"Music longer than {DURATION_LIMIT}min are not allowed to play")
+            await cb.message.edit(f"music longer than {DURATION_LIMIT}min are not allowed to play")
             return
     except:
         pass    
@@ -1025,7 +1025,7 @@ async def jiosaavn(client: Client, message_: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "sgp music"
+        user.first_name = "fs musical"
     usar = user
     wew = usar.id
     try:
@@ -1062,7 +1062,7 @@ async def jiosaavn(client: Client, message_: Message):
                     # print(e)
                     await lel.edit(
                         f"<b>🔴 Flood Wait Error 🔴 \nUser {user.first_name} couldn't join your group due to heavy requests for userbot! Make sure user is not banned in group."
-                        "\n\nOr manually add @asistensgpmusik to your Group and try again</b>",
+                        "\n\nOr manually add @fsmusicasisstant to your Group and try again</b>",
                     )
     try:
         await USER.get_chat(chid)
@@ -1095,7 +1095,7 @@ async def jiosaavn(client: Client, message_: Message):
     try:    
         duuration= round(sduration / 60)
         if duuration > DURATION_LIMIT:
-            await cb.message.edit(f"Music longer than {DURATION_LIMIT}min are not allowed to play")
+            await cb.message.edit(f"music longer than {DURATION_LIMIT}min are not allowed to play")
             return
     except:
         pass    
@@ -1107,7 +1107,7 @@ async def jiosaavn(client: Client, message_: Message):
             ],
             [
                 InlineKeyboardButton(
-                    text="🍁 Channel", url=f"https://t.me/joinchat/m0igZdtuGl81MTll"
+                    text="🍂 Group", url=f"https://t.me/friendshitt"
                 )
             ],
             [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
