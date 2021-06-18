@@ -262,7 +262,7 @@ async def hfmm(_, message):
         )
 
     elif status == "OFF" or status == "off" or status == "Off":
-        lel = await message.reply("`Processing...`")
+        lel = await message.reply("`processing...`")
         
         if message.chat.id in DISABLED_GROUPS:
             await lel.edit("music player sudah dimatikan di onrolan ini")
@@ -481,14 +481,14 @@ async def play(_, message: Message):
                     invitelink = await _.export_chat_invite_link(chid)
                 except:
                     await lel.edit(
-                        "<b>Add me as admin of yor group first</b>",
+                        "<b>jadikan saya admin grup terlebih dahulu.</b>",
                     )
                     return
 
                 try:
                     await USER.join_chat(invitelink)
                     await USER.send_message(
-                        message.chat.id, "I joined this group for playing music in VC"
+                        message.chat.id, "saya bergabung ke grp ini untuk memutar musik di voice chat group anda."
                     )
                     await lel.edit(
                         "<b>helper userbot joined your chat</b>",
@@ -551,7 +551,7 @@ async def play(_, message: Message):
         )
         file_name = get_file_name(audio)
         title = file_name
-        thumb_name = "https://telegra.ph/file/646daa8ac179719cb1957.png"
+        thumb_name = "https://telegra.ph/file/c7dd34a31e9c0b3ecd29b.png"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
         views = "locally added"
@@ -608,7 +608,7 @@ async def play(_, message: Message):
         for i in message.command[1:]:
             query += " " + str(i)
         print(query)
-        await lel.edit("🎵 **meproses...**")
+        await lel.edit("🎵 **memproses...**")
         ydl_opts = {"format": "bestaudio[ext=m4a]"}
         
         try:
@@ -887,7 +887,7 @@ async def deezer(client: Client, message_: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "veez music"
+        user.first_name = "sgp music"
     usar = user
     wew = usar.id
     try:
@@ -912,7 +912,7 @@ async def deezer(client: Client, message_: Message):
                 try:
                     await USER.join_chat(invitelink)
                     await USER.send_message(
-                        message_.chat.id, "I joined this group for playing music in VC"
+                        message_.chat.id, "saya bergabung ke grup ini untuk memutar musik di voice chat group."
                     )
                     await lel.edit(
                         "<b>helper userbot joined your chat</b>",
@@ -940,7 +940,7 @@ async def deezer(client: Client, message_: Message):
     queryy = text[1]
     query = queryy
     res = lel
-    await res.edit(f"Searching 👀👀👀 for `{queryy}` on deezer")
+    await res.edit(f"Searching... for `{queryy}` on deezer")
     try:
         songs = await arq.deezer(query,1)
         if not songs.ok:
@@ -950,7 +950,7 @@ async def deezer(client: Client, message_: Message):
         url = songs.result[0].url
         artist = songs.result[0].artist
         duration = songs.result[0].duration
-        thumbnail = "https://telegra.ph/file/646daa8ac179719cb1957.png"
+        thumbnail = "https://telegra.ph/file/c7dd34a31e9c0b3ecd29b.png"
 
     except:
         await res.edit("Found Literally Nothing, You Should Work On Your English!")
@@ -1019,13 +1019,13 @@ async def jiosaavn(client: Client, message_: Message):
     global que
     if message_.chat.id in DISABLED_GROUPS:
         return    
-    lel = await message_.reply("🔄 **Processing**")
+    lel = await message_.reply("🔄 **processing...**")
     administrators = await get_administrators(message_.chat)
     chid = message_.chat.id
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "DaisyMusic"
+        user.first_name = "sgp music"
     usar = user
     wew = usar.id
     try:
@@ -1062,7 +1062,7 @@ async def jiosaavn(client: Client, message_: Message):
                     # print(e)
                     await lel.edit(
                         f"<b>🔴 Flood Wait Error 🔴 \nUser {user.first_name} couldn't join your group due to heavy requests for userbot! Make sure user is not banned in group."
-                        "\n\nOr manually add @DaisyXmusic to your Group and try again</b>",
+                        "\n\nOr manually add @asistensgpmusik to your Group and try again</b>",
                     )
     try:
         await USER.get_chat(chid)
@@ -1077,7 +1077,7 @@ async def jiosaavn(client: Client, message_: Message):
     text = message_.text.split(" ", 1)
     query = text[1]
     res = lel
-    await res.edit(f"Searching 👀👀👀 for `{query}` on jio saavn")
+    await res.edit(f"Searching... for `{query}` on jio saavn")
     try:
         songs = await arq.saavn(query)
         if not songs.ok:
@@ -1107,7 +1107,7 @@ async def jiosaavn(client: Client, message_: Message):
             ],
             [
                 InlineKeyboardButton(
-                    text="🌸 Channel", url=f"https://t.me/{updateschannel}"
+                    text="🍁 Channel", url=f"https://t.me/joinchat/m0igZdtuGl81MTll"
                 )
             ],
             [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
