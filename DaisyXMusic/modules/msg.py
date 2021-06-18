@@ -17,62 +17,62 @@
 import os
 from DaisyXMusic.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,UPDATES_CHANNEL
 class Messages():
-      START_MSG = "**Hello 👋 [{}](tg://user?id={})!**\n\n🤖 I am an advanced bot created for playing music in the voice chats of Telegram Groups & Channels.\n\n✅ Send me /help for more info."
+      START_MSG = "**🌸 hello [{}](tg://user?id={})!**\n\n🌸 aku veez music bot, aku bisa memutar lagu di dalam voice chat group dan channel.\n\n🌸 ketik /help untuk bantuan yah."
       HELP_MSG = [
         ".",
 f"""
-**Hey 👋 Welcome back to {PROJECT_NAME}
+**🌸 hai, welcome back to {PROJECT_NAME}
 
-⚪️ {PROJECT_NAME} can play music in your group's voice chat as well as channel voice chats
+🌸 {PROJECT_NAME} dapat memutar musik di voice chat group dan channel.
 
-⚪️ Assistant name >> @{ASSISTANT_NAME}\n\nClick next for instructions**
+🌸 asisstant bot ➠ @{ASSISTANT_NAME}\n\ntekan next untuk langkah selanjutnya.**
 """,
 
 f"""
-**Setting up**
+**🌻 pengaturan untuk grup:**
 
-1) Make bot admin (Group and in channel if use cplay)
-2) Start a voice chat
-3) Try /play [song name] for the first time by an admin
-*) If userbot joined enjoy music, If not add @{ASSISTANT_NAME} to your group and retry
+1) bot harus jadi admin dan diberi izin manage voice chat.
+2) nyalakan vcg atau voice chat nya sebelum req music.
+3) lalu ketik /play [judul lagu] untuk memutar music.
+4) jika asisstant bergabung ke vcg silahkan menikmati music nya, jika tidak, tambahkan @{ASSISTANT_NAME} ke dalam grup lalu coba lagi.
 
-**For Channel Music Play**
-1) Make me admin of your channel 
-2) Send /userbotjoinchannel in linked group
-3) Now send commands in linked group
+**🌻 pengaturan untuk channel:**
+1) jadikan saya admin di channel.
+2) ketik /userbotjoinchannel di grup yang dihubungkan dengan channel.
+3) lalu ketikkan perintah dibawah ini di dalam grup yang dihubungkan ke channel.
 
-**Commands**
+**🌸 commands.**
 
-**=>> Song Playing 🎧**
+**🌻 perintah memutar lagu:**
 
-- /play: Play the requestd song
-- /play [yt url] : Play the given yt url
-- /play [reply yo audio]: Play replied audio
-- /dplay: Play song via deezer
-- /splay: Play song via jio saavn
-- /ytplay: Directly play song via Youtube Music
+- /play: putar lagu dengan judul/nama lagu.
+- /play [link youtube] : putar lagu melalui link youtube.
+- /play [balas ke audio]: putar lagu melalui audio.
+- /dplay: putar lagu via deezer.
+- /splay: putar lagu via jio saavn.
+- /ytplay: putar lagu via youtube music.
 
-**=>> Playback ⏯**
+**🌻 playback:**
 
-- /player: Open Settings menu of player
-- /skip: Skips the current track
-- /pause: Pause track
-- /resume: Resumes the paused track
-- /end: Stops media playback
-- /current: Shows the current Playing track
-- /playlist: Shows playlist
+- /player: buka pengaturan pemutar musik.
+- /skip: lewati lagu saat ini ke lagu berikutnya.
+- /pause: jeda pemutaran music.
+- /resume: lanjutkan pemutaran lagu yang di jeda.
+- /end: hentikan pemutaran musik.
+- /current: tampilkan trek pemutaran.
+- /playlist: tampilkan daftar lagu yang diputar.
 
-*Player cmd and all other cmds except /play, /current  and /playlist  are only for admins of the group.
+*semua perintah dapat digunakan member grup kecuali /skip, /end, /pause, /resume hanya untuk admin.
 """,
         
 f"""
 **=>> Channel Music Play 🛠**
 
-⚪️ For linked group admins only:
+🌸 hanya untuk admin grup channel:
 
-- /cplay [song name] - play song you requested
-- /cdplay [song name] - play song you requested via deezer
-- /csplay [song name] - play song you requested via jio saavn
+- /cplay [nama lagu] - play song you requested
+- /cdplay [nama lagu] - play song you requested via deezer
+- /csplay [nama lagu] - play song you requested via jio saavn
 - /cplaylist - Show now playing list
 - /cccurrent - Show now playing
 - /cplayer - open music player settings panel
@@ -82,30 +82,31 @@ f"""
 - /cend - stop music play
 - /userbotjoinchannel - invite assistant to your chat
 
-channel is also can be used instead of c ( /cplay = /channelplay )
+channel juga dapat digunakan sebagai pengganti c ( /cplay = /channelplay )
 
-⚪️ If you donlt like to play in linked group:
+🌸 Jika anda tidak ingin memutar musik di grup channel lakukan ini:
 
-1) Get your channel ID.
-2) Create a group with tittle: Channel Music: your_channel_id
-3) Add bot as Channel admin with full perms
-4) Add @{ASSISTANT_NAME} to the channel as an admin.
-5) Simply send commands in your group.
+1) ambil id channel mu.
+2) buat grup dengan nama: Channel Music: your_channel_id
+3) jadikan bot admin di channel dengan izin penuh.
+4) tambahkan @{ASSISTANT_NAME} ke dalam channel dan jadikan admin.
+5) cukup kirim perintah di grup anda.
 """,
 
 f"""
-**=>> More tools 🧑‍🔧**
+**🌻 more tools:**
 
-- /musicplayer [on/off]: Enable/Disable Music player
-- /admincache: Updates admin info of your group. Try if bot isn't recognize admin
-- /userbotjoin: Invite @{ASSISTANT_NAME} Userbot to your chat
+- /musicplayer [on/off]: enable/disable music player.
+- /admincache: perbarui informasi admin di grup anda. lakukan jika bot tidak merespon perintah admin.
+- /userbotjoin: undang @{ASSISTANT_NAME} userbot ke dalam grup anda.
 
-**=>> Commands for Sudo Users ⚔️**
+**⚔️ perintah untuk sudo users:**
 
- - /userbotleaveall - remove assistant from all chats
- - /gcast <reply to message> - globally brodcast replied message to all chats
- - /pmpermit [on/off] - enable/disable pmpermit message
-*Sudo Users can execute any command in any groups
+ - /userbotleaveall - keluarkan userbot dari semua grup.
+ - /gcast <balas ke pesan> - kirim pesan broadcast secara global.
+ - /pmpermit [on/off] - enable/disable pesan pmpermit.
+ 
+*sudo users dapat menjalankan perintah apa pun di grup mana pun.
 
 """
       ]
