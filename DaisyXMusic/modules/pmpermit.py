@@ -33,7 +33,7 @@ async def pmPermit(client: USER, message: Message):
                 return
             await USER.send_message(
                 message.chat.id,
-                "halo 👋, saya sgp asisstant.**\n\n📕 about:\n➥ Saya adalah asistant sgp music bot.\n➥ Dilarang spam pesan ke akun ini.\n\n👉 **kirim link undangan grup mu jika asisten tidak dapat bergabung ke dalam grup mu.**\n\n🤖 **Bot Musik:** @sgpmusicbot.\n**🍁 Owner:** @NeetflixHD\n\n",
+                "halo 👋, saya fs musical asisstant.**\n\n📕 about:\n➥ Saya adalah asistant fs musical bot.\n➥ Dilarang spam pesan ke akun ini.\n\n👉 **kirim link undangan grup mu jika asisten tidak dapat bergabung ke dalam grup mu.**\n\n💬 **Group:** @friendshitt.\n**🌹 Owner:** @CEONetTV\n\n",
             )
             return
 
