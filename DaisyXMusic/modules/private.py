@@ -33,12 +33,12 @@ def _start(client, message):
                         "➕ tambahkan saya ke grup mu ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
                 [
                     InlineKeyboardButton(
-                        "🌻 Channel", url=f"https://t.me/{UPDATES_CHANNEL}"), 
+                        "🌻 Channel", url=f"https://t.me/joinchat/m0igZdtuGl81MTll"), 
                     InlineKeyboardButton(
-                        "🌸 Group", url=f"https://t.me/{SUPPORT_GROUP}")
+                        "🍁 Group", url=f"https://t.me/joinchat/NTSKWi0Syhs2NzAx")
                 ],[
                     InlineKeyboardButton(
-                        "✨ OWNER ✨", url=f"https://t.me/dlwrml")
+                        "✨ OWNER ✨", url=f"https://t.me/NeetflixHD")
                 ]
             ]
         ),
@@ -53,7 +53,7 @@ async def gstart(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "🌸 SUPPORT", url=f"https://t.me/{SUPPORT_GROUP}"
+                        "🍁 SUPPORT", url=f"https://t.me/joinchat/NTSKWi0Syhs2NzAx"
                     )
                 ]
             ]
@@ -88,16 +88,16 @@ def help_answer(client, callback_query):
 def map(pos):
     if(pos==1):
         button = [
-            [InlineKeyboardButton(text = '▶️', callback_data = "help+2")]
+            [InlineKeyboardButton(text = 'NEXT ▶️', callback_data = "help+2")]
         ]
     elif(pos==len(tr.HELP_MSG)-1):
         url = f"https://t.me/{SUPPORT_GROUP}"
         button = [
             [InlineKeyboardButton("➕ tambahkan saya ke grup mu ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
-            [InlineKeyboardButton(text = '🌻 Channel', url=f"https://t.me/{UPDATES_CHANNEL}"),
-             InlineKeyboardButton(text = '🌸 Group', url=f"https://t.me/{SUPPORT_GROUP}")],
-            [InlineKeyboardButton(text = '✨ OWNER ✨', url=f"https://t.me/dlwrml")],
-            [InlineKeyboardButton(text = '◀️', callback_data = f"help+{pos-1}")]
+            [InlineKeyboardButton(text = '🌻 Channel', url=f"https://t.me/joinchat/m0igZdtuGl81MTll"),
+             InlineKeyboardButton(text = '🍁 Group', url=f"https://t.me/joinchat/NTSKWi0Syhs2NzAx")],
+            [InlineKeyboardButton(text = '✨ OWNER ✨', url=f"https://t.me/NeetflixHD")],
+            [InlineKeyboardButton(text = '◀️ BACK', callback_data = f"help+{pos-1}")]
         ]
     else:
         button = [
@@ -111,7 +111,7 @@ def map(pos):
 @Client.on_message(filters.command("help") & ~filters.private & ~filters.channel)
 async def ghelp(_, message: Message):
     await message.reply_text(
-        f"""**🌸 halo, saya veez music bot yang dapat memutar musik di voice chat group & channel.**""",
+        f"""**🍁 halo, saya sagapung music bot yang dapat memutar musik di voice chat group & channel anda.**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
