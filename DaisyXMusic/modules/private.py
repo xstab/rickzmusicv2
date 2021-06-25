@@ -33,12 +33,12 @@ def _start(client, message):
                         "➕ tambahkan saya ke grup mu ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
                 [
                     InlineKeyboardButton(
-                        "🌹 Channel", url=f"https://t.me/levinachannel"), 
+                        "🌹 Channel", url=f"https://t.me/rickzsupportch"), 
                     InlineKeyboardButton(
-                        "🍂 Group", url=f"https://t.me/friendshitt")
+                        "🍂 Group", url=f"https://t.me/joinchat/X-Yn4d9-YWthMDIx")
                 ],[
                     InlineKeyboardButton(
-                        "✨ OWNER ✨", url=f"https://t.me/CEONetTV")
+                        "✨ OWNER ✨", url=f"https://t.me/maafkesenggol")
                 ]
             ]
         ),
@@ -53,7 +53,7 @@ async def gstart(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "🍂 GROUP", url=f"https://t.me/friendshitt"
+                        "🍂 GROUP", url=f"https://t.me/joinchat/X-Yn4d9-YWthMDIx"
                     )
                 ]
             ]
@@ -94,9 +94,9 @@ def map(pos):
         url = f"https://t.me/{SUPPORT_GROUP}"
         button = [
             [InlineKeyboardButton("➕ tambahkan saya ke grup mu ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
-            [InlineKeyboardButton(text = '🌹 Channel', url=f"https://t.me/levinachannel"),
-             InlineKeyboardButton(text = '🍂 Group', url=f"https://t.me/friendshitt")],
-            [InlineKeyboardButton(text = '✨ OWNER ✨', url=f"https://t.me/CEONetTV")],
+            [InlineKeyboardButton(text = '🌹 Channel', url=f"https://t.me/rickzsupportch"),
+             InlineKeyboardButton(text = '🍂 Group', url=f"https://t.me/joinchat/X-Yn4d9-YWthMDIx")],
+            [InlineKeyboardButton(text = '✨ OWNER ✨', url=f"https://t.me/maafkesenggol")],
             [InlineKeyboardButton(text = '◀️ BACK', callback_data = f"help+{pos-1}")]
         ]
     else:
