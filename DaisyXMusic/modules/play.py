@@ -451,6 +451,7 @@ async def m_cb(b, cb):
 
 
 @Client.on_message(command("play") & other_filters)
+@authorized_users_only
 async def play(_, message: Message):
     global que
     global useer
